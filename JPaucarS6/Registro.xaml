@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarS6.Registro">
+    <!--NavigationPage.HasNavigationBar="False"-->
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro de vehiculos" HorizontalTextAlignment="Center" FontSize="20" />
+            <Entry x:Name="TxtMarca" Placeholder="Ingrese la marca"/>
+            <Entry x:Name="TxtModelo" Placeholder="Ingrese el modelo"/>
+            <Entry x:Name="TxtAnio" Placeholder="Ingrese el año" Keyboard="Numeric"/>
+            <Entry x:Name="TxtPlaca" Placeholder="Ingrese la placa"/>
+            <Entry x:Name="TxtColor" Placeholder="Ingrese el color"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnInsertar" Text="Insertar" Clicked="BtnInsertar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="BtnRegresar" Text="Regresar" Clicked="BtnRegresar_Clicked" Grid.Row="0" Grid.Column="1"/>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

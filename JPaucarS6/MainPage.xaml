@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarS6.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumir servicio web" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Label x:Name="Texto" Text=""/>
+
+        <Button x:Name="Registro" Text="Registro" Clicked="Registro_Clicked" />
+        <Button Text="Consultar" x:Name="BtnGet" Clicked="BtnGet_Clicked"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Id" FontSize="16" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="Marca - Modelo" FontSize="16" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Placa" FontSize="16" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="Año" FontSize="16" Grid.Row="0" Grid.Column="3"/>
+        </Grid>
+
+        <ListView x:Name="ListaVehiculos" ItemSelected="ListaVehiculos_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="125"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="LblMarca" Text="{Binding Id}" Grid.Row="0" Grid.Column="0" />
+                                <Label x:Name="LblPlaca" Text="{Binding BrandModel}" Grid.Row="0" Grid.Column="1" />
+                                <Label x:Name="LblModelo" Text="{Binding Plate}" Grid.Row="0" Grid.Column="2" />
+                                <Label x:Name="LblAnio" Text="{Binding Year}" Grid.Row="0" Grid.Column="3" />
+
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

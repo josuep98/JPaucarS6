@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarS6.Actualizacion">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Detalle de vehiculo" HorizontalTextAlignment="Center" FontSize="20" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Marca: " Grid.Row="0" Grid.Column="0" FontSize="18" VerticalTextAlignment="Center"/>
+                <Label Text="Modelo: " Grid.Row="1" Grid.Column="0" FontSize="18" VerticalTextAlignment="Center"/>
+                <Label Text="Año: " Grid.Row="2" Grid.Column="0" FontSize="18" VerticalTextAlignment="Center"/>
+                <Label Text="Placa: " Grid.Row="3" Grid.Column="0" FontSize="18" VerticalTextAlignment="Center"/>
+                <Label Text="Color: " Grid.Row="4" Grid.Column="0" FontSize="18" VerticalTextAlignment="Center"/>
+
+                <Entry x:Name="TxtId" IsVisible="false"/>
+                <Entry x:Name="TxtMarca" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="TxtModelo" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="TxtAnio" Grid.Row="2" Grid.Column="1"/>
+                <Entry x:Name="TxtPlaca" Grid.Row="3" Grid.Column="1"/>
+                <Entry x:Name="TxtColor" Grid.Row="4" Grid.Column="1"/>
+
+            </Grid>
+
+            <Button x:Name="BtnActualizar" Text="Actualizar" Clicked="BtnActualizar_Clicked"/>
+            <Button x:Name="BtnEliminar" Text="Eliminar" Clicked="BtnEliminar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
